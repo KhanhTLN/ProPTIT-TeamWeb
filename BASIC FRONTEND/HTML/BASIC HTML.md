@@ -351,3 +351,211 @@
 ```
 -> Dùng để nhúng mã JS, ví dụ tương tác như: Cảnh báo(Alert), thay đổi nội dung HTML, gửi dữ liệu, xử lý logic
 
+
+5. **Các thuộc tính:**
+<table border="1">
+    <thead>
+        <tr>
+            <th>Thuộc tính</th>
+            <th>Mô tả</th>
+            <th>Ví dụ</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>class</td>
+            <td>gắn lớp CSS, có thể dùng nhiều lần</td>
+            <td>&lt;div class="box red"&gt;&lt;/div&gt;</td>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>Gắn định danh duy nhất trên toàn trang</td>
+            <td>&lt;h1 id="title"&gt;Tiêu đề&lt;/h1&gt;</td>
+        </tr>
+        <tr>
+            <td>required</td>
+            <td>Bắt buộc nhập trong form</td>
+            <td>&lt;input type="email" required&gt;</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>Xác định loại của input</td>
+            <td>&lt;input type="password"&gt;</td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>Tên trường dữ liệu gửi đi</td>
+            <td>&lt;input name="email"&gt;</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>Giá trị mặc định</td>
+            <td>&lt;input value="Sinh viên"&gt;</td>
+        </tr>
+        <tr>
+            <td>placeholder</td>
+            <td>Gợi ý trong ô input</td>
+            <td>&lt;input placeholder="Nhập tên..."&gt;</td>
+        </tr>
+    </tbody>
+</table>
+
+6. **Thẻ div và span:**
+<table>
+    <thead>
+        <tr>
+            <th>Thẻ</th>
+            <th>Vai trò</th>
+            <th>Loại element</th>
+            <th>Khi nào dùng</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>&lt;div&gt;</td>
+            <td>Chia khối, bố cục</td>
+            <td>Block element</td>
+            <td>Dùng để nhóm các phần tử lớn, xây layout</td>
+        </tr>
+        <tr>
+            <td>&lt;span&gt;</td>
+            <td>Bọc nội tuyến</td>
+            <td>Inline element</td>
+            <td>Dùng để định dạng một phần văn bản nhỏ</td>
+        </tr>
+    </tbody>
+</table>
+
+**Ví dụ:**
+```html
+<div class="card">
+  <h2>Học HTML</h2>
+  <p>Giá chỉ <span style="color: red;">100k</span></p>
+</div>
+```
+
+**Kết quá:**
+<div class="card">
+  <h2>Học HTML</h2>
+  <p><span style="color: red;">chill lắm</span></p>
+</div>
+-> **div** bao toàn bộ nội dung(khối)
+-> **span** chỉ bọc chữ "chill lắm" để tô màu
+
+
+7. **Block và inline elements:**
+- **Block Element:**
+    + Chiếm toàn bộ chiều ngang
+    + Tự xuống dòng
+    + Có thể chứa block hoặc inline
+    + Ví dụ: div, p, h1–h6, ul, li, table, form, header, section, ...
+
+- **Inline Element:**
+    + Không xuống dòng
+    + Chỉ chiếm đúng nội dung của nó
+    + Không chưa block element
+    + Ví dụ: span, a, strong, em, img, input, ...
+
+- **So sánh nhanh:**
+<table>
+    <thead>
+        <tr>
+            <th>Thuộc tính</th>
+            <th>Block</th>
+            <th>Inline</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Xuống dòng?</td>
+            <td>Có</td>
+            <td>Không</td>
+        </tr>
+        <tr>
+            <td>Chiều ngang</td>
+            <td>100%</td>
+            <td>Theo nội dung</td>
+        </tr>
+        <tr>
+            <td>Dùng để</td>
+            <td>Layout, bố cục</td>
+            <td>Trang trí văn bản nhỏ</td>
+        </tr>
+        <tr>
+            <td>Ví dụ</td>
+            <td>div, p,..</td>
+            <td>span, a, img,..</td>
+        </tr>
+    </tbody>
+</table>
+
+8. **Semantic HTML:**
+- **Semantic HTML** là các thẻ có ý nghĩa rõ ràng về nội dung - giúp trình duyệt, người đọc, và công cụ tìm kiếm hiểu được vai trò của từng phần
+<table>
+    <thead>
+        <tr>
+            <th>Thẻ</th>
+            <th>Ý nghĩa</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>&lt;header&gt;</td>
+            <td>Phần đầu của trang hoặc khu vực</td>
+        </tr>
+        <tr>
+            <td>&lt;footer&gt;</td>
+            <td>Phần chân trang</td>
+        </tr>
+        <tr>
+            <td>&lt;nav&gt;</td>
+            <td>Menu điều hướng</td>
+        </tr>
+        <tr>
+            <td>&lt;section&gt;</td>
+            <td>Một phần nội dung có ý nghĩa độc lập</td>
+        </tr>
+        <tr>
+            <td>&lt;article&gt;</td>
+            <td>Một bài viết(tin tức, blog,..)</td>
+        </tr>
+        <tr>
+            <td>&lt;aside&gt;</td>
+            <td>Nội dung phụ(quảng cáo, thông tin thêm)</td>
+        </tr>
+        <tr>
+            <td>&lt;main&gt;</td>
+            <td>Phần nội dung chính của trang</td>
+        </tr>
+    </tbody>
+</table> 
+
+**Ví dụ:**
+<body>
+  <header>
+    <h1>Trang web học lập trình</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Trang chủ</a></li>
+      <li><a href="#courses">Khoá học</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Giới thiệu</h2>
+      <p>Chào mừng bạn đến với khóa học HTML.</p>
+    </section>
+
+    <article>
+      <h2>Bài viết mới</h2>
+      <p>Hôm nay ta học về Semantic HTML.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Khánh Trần</p>
+  </footer>
+</body>
