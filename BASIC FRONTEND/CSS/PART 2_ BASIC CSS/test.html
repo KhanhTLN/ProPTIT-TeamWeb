@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sản phẩm</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: rgb(2, 2, 91);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .item {
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column; 
+      height: 100%;
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button {
+      background-color: blue;
+      color: white;
+      border-radius: 5px;
+      padding: 7px 12px;
+      border: none;
+      margin-top: auto;
+    }
+
+    .button:hover {
+      background-color: darkblue;
+    }
+    
+    @media screen and (max-width:600px){
+        .container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+  </style>
+</head>
+<body>
+  <h2>New products</h2>
+  <div class="container">
+    <div class="item">
+      <img src="https://product.hstatic.net/200000758017/product/801740_1_e4adfa6d09b7468a8c9fb21bf8e02bd4_01765f98fc7e4802bd80ec1118d55cfd_large.jpg" alt="Adidas">
+      <p>Adidas EQT</p>
+      <p>7,000,000đ</p>
+      <button class="button">Add to cart</button>
+    </div>
+    <div class="item">
+      <img src="https://product.hstatic.net/200000758017/product/805476_01_164da92dedd34ce39222c194ab983bc3_4c82ce6f414f4ad2bb73c1e970ffa63b_large.jpg" alt="Adidas">
+      <p>Adidas NMD R1</p>
+      <p>3,500,000đ</p>
+      <button class="button">Add to cart</button>
+    </div>
+    <div class="item">
+      <img src="https://product.hstatic.net/200000758017/product/201493_1_017364c87c3e4802a8cda5259e3d5a95_2918e0368651419086f4f7dec420954d_large.jpg" alt="Adidas">
+      <p>Adidas NMD R1 Exclusive</p>
+      <p>7,000,000đ</p>
+      <button class="button">Add to cart</button>
+    </div>
+    <div class="item">
+      <img src="https://product.hstatic.net/200000758017/product/801270_1_c42c68dac62843d8b2d3835de4afb829_26dfdbea288642c4b93c3445cfe9a2de_master.jpg" alt="Adidas">
+      <p>Adidas NMD XR1 "Pearl Grey"</p>
+      <p>7,000,000đ</p>
+      <button class="button">Add to cart</button>
+    </div>
+  </div>
+</body>
+</html>
